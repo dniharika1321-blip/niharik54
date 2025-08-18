@@ -18,6 +18,7 @@ with st.form(key='service_form'):
     rate = st.selectbox("Rate", ["", "1000-2000", "2000-3000", "3000-4000"])
     servicedesign = st.selectbox("Services", ["", "House Cleaning", "Car Cleaning", "Office Cleaning"])
     condition = st.text_input("Condition", "") 
+  address = st.text_input("Address", "")
     # Let the user pick their preferred cleaning date & time
     preferred_date = st.date_input("Preferred Cleaning Date")
     preferred_time = st.time_input("Preferred Cleaning Time")
@@ -40,6 +41,7 @@ if submit_button:
             f"Rate: {rate}\n"
             f"Services: {servicedesign}\n"
             f"Condition: {condition}\n"
+         f"Address: {address}\n"
             f"Preferred Time: {current_time}\n"
             f"Preferred Date: {current_date}\n"
             f"✅ We’ll contact you shortly."
@@ -53,6 +55,7 @@ if submit_button:
             "rate": rate,
             "service_design": servicedesign,
             "condition": condition,
+         "address":address,
             "time": current_time,
             "date": current_date,
             "chat_id": chat_id,
