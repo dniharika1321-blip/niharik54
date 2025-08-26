@@ -3,7 +3,7 @@ import requests
 from datetime import datetime
 
 # Corrected n8n webhook URL (Test URL)
-N8N_WEBHOOK_URL = "https://hchmj498azmltpzcfhi6i79o.hooks.n8n.cloud/webhook-test/classify-input"
+N8N_WEBHOOK_URL = "https://hchmj498azmltpzcfhi6i79o.hooks.n8n.cloud/webhook/classify-input"
 
 # Get chat_id from query params (optional)
 chat_id = st.query_params.get("chatid", [""])
